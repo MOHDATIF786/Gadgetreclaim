@@ -1,0 +1,493 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>GadgetReclaim.com</title>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <link rel="icon"
+          type="images/icon"
+          href="img/noe.png">
+      <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+      <header>
+      <div class="navbar">
+          <div class="nav-name">
+              <h1 class="F">GadgetReclaim</h1>
+          </div>
+          <div class="nav-search">
+            <input placeholder="Search" class="search-input" />
+            <div class="search-icon border">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <div class="nav-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+          </div>
+          <div class="nav-whish ">
+              <i class="fa-solid fa-heart"></i>
+              whishlist
+            </div>
+            <div>
+              <button class="log" onclick="openPopup('login')"> Login 
+              </button></div>
+
+              <div>
+                <button class="log" onclick="openPopup('signup')"> Sign up
+                </button></div>
+                <div class="popup-overlay" id="popupOverlay">
+                  <div class="popup" id="popup">
+                    <button class="close-btn" onclick="closePopup()">×</button>
+            
+                    <!-- Login Form -->
+                    <div class="form-container" id="loginForm">
+                      <p class="title" id="loginTitle">Login</p>
+                      <form class="form">
+                        <div class="input-group">
+                          <label for="username">Username</label>
+                          <input
+                            autocomplete="off"
+                            placeholder="Username"
+                            id="username"
+                            type="text"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <label for="password">Password</label>
+                          <input placeholder="Password" id="password" type="password" />
+                          <div class="forgot">
+                            <a href="#">Forgot Password ?</a>
+                          </div>
+                        </div>
+                        <button class="sign">Sign in</button>
+                      </form>
+                      <div class="social-message">
+                        <div class="line"></div>
+                        <p class="message">Login with social accounts</p>
+                        <div class="line"></div>
+                      </div>
+                      <div class="social-icons">
+                        <button aria-label="Log in with Google" class="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            class="w-5 h-5 fill-current"
+                          >
+                            <path
+                              d="M16.318 13.714v5.484h9.078c-0.37 2.354-2.745 6.901-9.078 6.901-5.458 0-9.917-4.521-9.917-10.099s4.458-10.099 9.917-10.099c3.109 0 5.193 1.318 6.38 2.464l4.339-4.182c-2.786-2.599-6.396-4.182-10.719-4.182-8.844 0-16 7.151-16 16s7.156 16 16 16c9.234 0 15.365-6.49 15.365-15.635 0-1.052-0.115-1.854-0.255-2.651z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <button aria-label="Log in with Twitter" class="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            class="w-5 h-5 fill-current"
+                          >
+                            <path
+                              d="M31.937 6.093c-1.177 0.516-2.437 0.871-3.765 1.032 1.355-0.813 2.391-2.099 2.885-3.631-1.271 0.74-2.677 1.276-4.172 1.579-1.192-1.276-2.896-2.079-4.787-2.079-3.625 0-6.562 3.017-6.562 6.725 0 0.525 0.062 1.033 0.155 1.519-5.454-0.273-10.287-2.89-13.49-6.885-0.561 0.958-0.885 2.074-0.885 3.272 0 2.261 1.186 4.253 3.016 5.428-1.11-0.034-2.167-0.367-3.092-0.921 0 0.031 0 0.062 0 0.092 0 3.173 2.367 5.862 5.51 6.484-0.55 0.188-1.126 0.293-1.71 0.293-0.418 0-0.823-0.039-1.217-0.115 0.823 2.647 3.213 4.572 6.05 4.625-2.297 1.79-5.01 2.707-8.004 2.707-0.522 0-1.038-0.031-1.547-0.092 2.88 1.847 6.274 2.92 9.876 2.92 11.837 0 18.31-9.334 18.31-17.395 0-0.27-0.005-0.537-0.018-0.804 1.265-0.915 2.341-2.04 3.188-3.304z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+            
+                    <!-- Signup Form (hidden by default) -->
+                    <div class="form-container" id="signupForm" style="display: none">
+                      <p class="title">Sign up</p>
+                      <form class="form">
+                        <div class="input-group">
+                          <label for="signupUsername">Username</label>
+                          <input
+                            autocomplete="off"
+                            placeholder="Username"
+                            id="signupUsername"
+                            type="text"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <label for="signupEmail">Email</label>
+                          <input
+                            autocomplete="off"
+                            placeholder="Email"
+                            id="signupEmail"
+                            type="email"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <label for="signupPassword">Password</label>
+                          <input
+                            placeholder="Password"
+                            id="signupPassword"
+                            type="password"
+                          />
+                        </div><br>
+                        <button class="sign">Sign up</button>
+                          <p class=" social-message">Already Have An Account? Login </p>
+                      </form>
+                    </div>
+                  </div>
+      </div>
+      </div>
+          <div class="navbar1">
+              <ul class="nav-links">
+                  <li class="nav-item1"><a href="#">Home <i class="fa-solid fa-house"></i></a></li>
+                <!-- Shop -->
+                <li class="nav-item">
+                  <a href="#">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a href="#">Item 1</a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                          <a href="#">Sub Item 1</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Sub Sub Item 1</a></li>
+                            <li><a href="#">Sub Sub Item 2</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Sub Item 2</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Sub Sub Item A</a></li>
+                            <li><a href="#">Sub Sub Item B</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Sub Item 3</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                  </ul>
+                </li>
+              
+                <!--sell phone-->
+                <li class="nav-item">
+                  <a href="#">Sell Phones</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a href="#">Item 1</a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                          <a href="#">Sub Item 1</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Sub Sub Item 1</a></li>
+                            <li><a href="#">Sub Sub Item 2</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Sub Item 2</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Sub Sub Item A</a></li>
+                            <li><a href="#">Sub Sub Item B</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Sub Item 3</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                  </ul>
+                </li>
+                  <!-- sell laptop -->
+                  <li class="nav-item">
+                    <a href="#">Sell Laptop</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item">
+                        <a href="#">Item 1</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-item">
+                            <a href="#">Sub Item 1</a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Sub Sub Item 1</a></li>
+                              <li><a href="#">Sub Sub Item 2</a></li>
+                            </ul>
+                          </li>
+                          <li class="dropdown-item">
+                            <a href="#">Sub Item 2</a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Sub Sub Item A</a></li>
+                              <li><a href="#">Sub Sub Item B</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">Sub Item 3</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Item 2</a></li>
+                      <li><a href="#">Item 3</a></li>
+                    </ul>
+                  </li>
+                    <!-- sell gadget -->
+                    <li class="nav-item">
+                      <a href="#">Sell Gadget</a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                          <a href="#">Item 1</a>
+                          <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 1</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Sub Sub Item 1</a></li>
+                                <li><a href="#">Sub Sub Item 2</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 2</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Sub Sub Item A</a></li>
+                                <li><a href="#">Sub Sub Item B</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Sub Item 3</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                      </ul>
+                    </li>
+                    <!-- buy phone -->
+                    <li class="nav-item">
+                      <a href="#">Buy Phones</a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                          <a href="#">Item 1</a>
+                          <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 1</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Sub Sub Item 1</a></li>
+                                <li><a href="#">Sub Sub Item 2</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 2</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Sub Sub Item A</a></li>
+                                <li><a href="#">Sub Sub Item B</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Sub Item 3</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                      </ul>
+                    </li>
+                    <!-- buy laptop  -->
+                    <li class="nav-item">
+                      <a href="#">Buy laptop</a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                          <a href="#">Item 1</a>
+                          <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 1</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Sub Sub Item 1</a></li>
+                                <li><a href="#">Sub Sub Item 2</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 2</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Sub Sub Item A</a></li>
+                                <li><a href="#">Sub Sub Item B</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Sub Item 3</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                      </ul>
+                    </li>
+                    <!-- repair -->
+                    <li class="nav-item">
+                      <a href="#">Repair </a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                          <a href="#">Item 1</a>
+                          <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 1</a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#">Sub Item 2</a>
+                            </li>
+                            <li><a href="#">Sub Item 3</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                      </ul>
+                    </li>
+                <!-- About -->
+                <li class="nav-item1">
+                  <a href="#">About Us <i class="fa-regular fa-address-card"></i></a> 
+                </li>
+          
+                <!-- Contact -->
+                <li class="nav-item1">
+                  <a href="#">Contact <i class="fa-solid fa-phone"></i></a></li>
+            </div>
+          </header>
+      <section class="banner">
+          <h1>Welcome to Our Store.</h1>
+          <p><h3>Discover the latest and greatest Product at Afordable prices!</h3></p>
+          <br><br>
+          <a href="/pages/product .html" class="btn">Shop Now</a>
+      </section>
+       
+      <!-- image slider -->
+      <div class="slider-container">
+        <div class="slider">
+          <button class="button prev" id="previous"></button>
+          <a href="#" id="imageLink">
+            <img src="images/image1.png" alt="Slider Image" id="imageHolder" />
+          </a>
+          <button class="button next" id="next"></button>
+        </div>
+        <!-- Line Indicators -->
+        <div class="lines-container" id="linesContainer"></div>
+      </div>
+  <!-- services -->
+      <div class="service">
+        <h1>Our Service</h1>
+        <div class="service-content">
+          <div class="clild_s">
+            <img src="img/sersellp.webp" alt="sell phone">
+            <span>Sell Phone</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/serbuyp.webp" alt="Buy phone">
+            <span>Buy Phone</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/surbuyl.webp" alt="Buy Laptop">
+            <span>Buy Laptop</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/surbuyl.webp" alt="Sell Laptop">
+            <span>Sell Laptop</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/surrepp.webp" alt="Repair Phone">
+            <span>Repair Phone</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/serrepl.webp" alt="Repair Laptop">
+            <span>Repair Laptop</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/serbuysw.webp" alt="Buy Smartwatches">
+            <span>Buy Smartwatches</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- sell -->
+      <div class="service">
+        <h1>Sell Your Old Device Now</h1>
+        <div class="service-content">
+          <div class="clild_s">
+            <img src="img/sersellp.webp" alt="sell phone">
+            <span>Sell Phone</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/selltab.webp" alt="sell tablet ">
+            <span>Sell tablet</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/sellconsoe.webp" alt="sell console">
+            <span>Sell console</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/surbuyl.webp" alt="Sell Laptop">
+            <span>Sell Laptop</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/sellspek.webp" alt="sell speaker">
+            <span>Sell Speaker</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/selltv.webp" alt="sell tv">
+            <span>Sell TV</span>
+          </div>
+          <div class="clild_s">
+            <img src="img/serbuysw.webp" alt= "sellg Smartwatches">
+            <span>Sell Smartwatches</span>
+          </div>
+        </div>
+      </div>
+    
+      <footer>
+        <div class="foot-pannel1"><a href="#">Back to top</a></div>
+        <div class="foot-pannel2">
+          <ul>
+            <p class="underline">Get to know us</p>
+            <a href=""> Careers</a>
+            <a href=""> Blog</a>
+            <a href=""> About GadgetReclaim</a>
+            <a href=""> Investor Relations</a>
+          </ul>
+          <ul>
+            <p class="underline">Service</p>
+            <a href=""> Sell Phone</a>
+            <a href=""> Sell Television </a>
+            <a href=""> Sell Smart Watches </a>
+            <a href=""> Sell speaker</a>
+            <a href=""> Sell DSLR </a>
+            <a href=""> Sell Earbud</a>
+            <a href=""> Repair phone</a>
+            <a href=""> Buy phone </a>
+            <a href=""> Recycle phone </a>
+            <a href=""> Find New Phone </a>
+            <a href=""> Partner with us </a>
+          </ul>
+          <ul>
+            <p class="underline">More INFO</p>
+            <a href=""> Terms & Condition</a>
+            <a href=""> Privacy & Policy</a>
+            <a href=""> Term of use</a>
+            <a href=""> Cookie Policyr</a>
+            <a href=""> Device Safety</a>
+            <a href=""> What is Refurbish</a>
+          </ul>
+          <ul>
+            <p class="underline">Let us help you</p>
+            <a href=""> F&Q</a>
+            <a href=""> your account</a>
+            <a href=""> your orders</a>
+            <a href=""> Contact US</a>
+            <a href=""> Return and Replacement</a>
+            <a href=""> Help</a>
+          </ul>
+          <ul class="handels">
+            <p class="underline">Social Media handels
+            </p>
+            <a href=""> Instagram  <i class="fa-brands fa-instagram"></i></a>
+            <a href=""> Twitter <i class="fa-brands fa-twitter"></i></a>
+            <a href=""> Facebook <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> Whatsapp <i class="fa-brands fa-whatsapp"></i></a>
+          </ul>
+        </div>
+        <div class="foot-pannel3">
+          <div class="logo"> GadgetReclaim</div>
+        </div>
+        <div class="foot-pannel4">
+          <div class="copyright">
+             CopyRight ©2025 GAdgetReclaim All right reserved    
+            </div>
+        </div>
+      </footer>
+      <script src="/js/add.js"></script>
+  </body>
+  </html>
