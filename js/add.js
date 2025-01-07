@@ -89,3 +89,35 @@ function closePopup() {
   const overlay = document.getElementById("popupOverlay");
   overlay.style.display = "none";
 }
+// card slider
+const sliderContainer1 = document.querySelector(".slider-container-1");
+const cards = document.querySelectorAll(".slider-card-1");
+const prevButton = document.getElementById("prev-1");
+const nextButton = document.getElementById("next-1");
+
+let currentIndex = 0;
+const cardWidth = cards[0].offsetWidth + 20; // card width + margin
+
+function updateSliderPosition() {
+  sliderContainer1.style.transform = `translateX(-${
+    currentIndex * cardWidth
+  }px)`;
+  prevButton.disabled = currentIndex === 0;
+  nextButton.disabled = currentIndex === cards.length - 3;
+}
+
+prevButton.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSliderPosition();
+  }
+});
+
+nextButton.addEventListener("click", () => {
+  if (currentIndex < cards.length - 3) {
+    currentIndex++;
+    updateSliderPosition();
+  }
+});
+
+updateSliderPosition();
