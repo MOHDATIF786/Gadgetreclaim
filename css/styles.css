@@ -685,7 +685,7 @@ input[type="email"] {
 .slider-card-1 .im1 {
   align-self: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .slider-card-1 p {
   color: #555;
