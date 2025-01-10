@@ -65,6 +65,7 @@ function runGalleryAuto() {
 }
 
 runGalleryAuto();
+
 // pop up
 function openPopup(formType) {
   const overlay = document.getElementById("popupOverlay");
@@ -121,3 +122,4 @@ nextButton.addEventListener("click", () => {
 });
 
 updateSliderPosition();
+// laptop

@@ -510,7 +510,6 @@ input[type="email"] {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 3px;
   margin-bottom: 10px;
 }
 
@@ -790,6 +789,9 @@ footer {
 .underline {
   text-decoration: underline 1.6px black;
 }
+
+/* foot er */
+
 .foot-pannel1 {
   background-color: #999fac84;
   height: 45px;
@@ -811,9 +813,6 @@ footer {
   height: 430px;
   display: flex;
   justify-content: space-around;
-}
-ul {
-  margin-top: 20px;
 }
 .foot-pannel2 ul a {
   display: block;
