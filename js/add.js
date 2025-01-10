@@ -19,33 +19,17 @@ imagesArray.forEach((_, index) => {
   line.classList.add("line");
   if (index === 0) line.classList.add("active");
   line.dataset.index = index;
-  line.addEventListener("click", () => goToSlide(index));
+
+  // Line Click Event
+  line.addEventListener("click", () => {
+    counter = index;
+    updateSlider();
+  });
+
   linesContainer.appendChild(line);
 });
 
 const lines = document.querySelectorAll(".line");
-
-// Event Listeners
-previous.onclick = showPreviousImage;
-next.onclick = showNextImage;
-
-// Functions
-function showNextImage() {
-  counter++;
-  if (counter === imagesArray.length) counter = 0;
-  updateSlider();
-}
-
-function showPreviousImage() {
-  if (counter === 0) counter = imagesArray.length;
-  counter--;
-  updateSlider();
-}
-
-function goToSlide(index) {
-  counter = index;
-  updateSlider();
-}
 
 function updateSlider() {
   imageHolder.src = imagesArray[counter].src;
@@ -55,6 +39,36 @@ function updateSlider() {
   lines.forEach((line) => line.classList.remove("active"));
   lines[counter].classList.add("active");
 }
+
+// Event Listeners
+// previous.onclick = showPreviousImage;
+// next.onclick = showNextImage;
+previous.onclick = () => {
+  counter = (counter - 1 + imagesArray.length) % imagesArray.length;
+  updateSlider();
+};
+
+next.onclick = () => {
+  counter = (counter + 1) % imagesArray.length;
+  updateSlider();
+};
+// Functions
+function showNextImage() {
+  counter++;
+  if (counter >= imagesArray.length) counter = 0;
+  updateSlider();
+}
+
+function showPreviousImage() {
+  counter--;
+  if (counter < 0) counter = imagesArray.length - 1;
+  updateSlider();
+}
+
+// function goToSlide(index) {
+//   counter = index;
+//   updateSlider();
+// }
 
 // Auto Slide
 function runGalleryAuto() {
