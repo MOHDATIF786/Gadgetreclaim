@@ -104,7 +104,7 @@ function updateSliderPosition() {
     currentIndex * cardWidth
   }px)`;
   prevButton.disabled = currentIndex === 0;
-  nextButton.disabled = currentIndex === cards.length - 3;
+  nextButton.disabled = currentIndex === cards.length - 4;
 }
 
 prevButton.addEventListener("click", () => {
@@ -115,7 +115,7 @@ prevButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  if (currentIndex < cards.length - 3) {
+  if (currentIndex < cards.length - 4) {
     currentIndex++;
     updateSliderPosition();
   }

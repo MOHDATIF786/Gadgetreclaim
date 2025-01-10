@@ -812,7 +812,10 @@ footer {
   color: rgb(0, 0, 0);
   height: 430px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.foot-pannel2 ul {
+  margin-top: 20px;
 }
 .foot-pannel2 ul a {
   display: block;
