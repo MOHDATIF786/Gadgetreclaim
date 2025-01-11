@@ -137,3 +137,37 @@ nextButton.addEventListener("click", () => {
 
 updateSliderPosition();
 // laptop
+const track = document.getElementById("carouselTrack");
+const prevControl = document.getElementById("prevControl");
+const nextControl = document.getElementById("nextControl");
+
+let index = 0;
+
+function updateTrack() {
+  const cardWidth = track.querySelector(".product-card").offsetWidth + 30; // Including margin
+  const maxIndex =
+    track.children.length -
+    Math.floor(track.parentElement.offsetWidth / cardWidth);
+  index = Math.max(0, Math.min(index, maxIndex)); // Clamp index to valid range
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+prevControl.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    updateTrack();
+  }
+});
+
+nextControl.addEventListener("click", () => {
+  const cardWidth = track.querySelector(".product-card").offsetWidth + 30; // Including margin
+  const maxIndex =
+    track.children.length -
+    Math.floor(track.parentElement.offsetWidth / cardWidth);
+  if (index < maxIndex) {
+    index++;
+    updateTrack();
+  }
+});
+
+window.addEventListener("resize", updateTrack); // Adjust on window resize
