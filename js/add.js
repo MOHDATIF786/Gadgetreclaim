@@ -171,3 +171,5 @@ nextControl.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", updateTrack); // Adjust on window resize
+
+//

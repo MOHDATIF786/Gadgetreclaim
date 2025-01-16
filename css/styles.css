@@ -574,8 +574,9 @@ input[type="email"] {
 .clild_s img {
   width: 150px; /* Adjust image width */
   height: 150px; /* Adjust image height */
-  object-fit: cover; /* Ensures the image fits well inside the container */
+  object-fit: contain; /* Ensures the image fits well inside the container */
   margin-bottom: 10px;
+  aspect-ratio: 3/2;
 }
 
 .clild_s span {
@@ -646,8 +647,9 @@ input[type="email"] {
   width: 150px;
   height: 150px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 15px;
+  aspect-ratio: 3/2;
 }
 
 .slider-logo-1 {
@@ -842,7 +844,9 @@ a:hover {
   display: block;
   border-radius: 16px;
   transition: transform 0.3s ease;
-  height: auto;
+  height: 300px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 .product-card img:hover {
   transform: scale(1.05);
@@ -936,7 +940,7 @@ footer {
 /* foot er */
 
 .foot-pannel1 {
-  background-color: #999fac84;
+  background-color: #e4e9f484;
   height: 45px;
   display: flex;
   justify-content: center;
@@ -951,11 +955,12 @@ footer {
   text-decoration: underline 1.5px rgb(2, 1, 1);
 }
 .foot-pannel2 {
-  background-color: #b2becb;
+  background-color: #f7f7f7;
   color: rgb(0, 0, 0);
   height: 430px;
   display: flex;
   justify-content: space-evenly;
+  padding-top: 2rem;
 }
 .foot-pannel2 ul {
   margin-top: 20px;
@@ -1005,3 +1010,5 @@ footer {
 .copyright {
   font-size: 0.8rem;
 }
+
+/* meqia qurry */
