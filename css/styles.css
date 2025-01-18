@@ -8,13 +8,20 @@ body {
   background-color: #ffffff;
 }
 .navbar {
-  height: 70px;
+  height: 72px;
   background-color: #bdc3c7;
   color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+.nav-name {
+  height: 70px;
+  width: auto;
+  mix-blend-mode: color-burn;
+  transform: scale(1.7);
+  margin-right: 36px;
 }
 /** box 3 **/
 .nav-search {
@@ -987,16 +994,17 @@ footer {
   transform: scale(1.4);
 }
 .foot-pannel3 {
-  background-color: #d9e1e9;
-  color: rgb(36, 34, 34);
-  border-top: 0.5px solid white;
-  height: 50px;
+  background-color: #bdc3c7;
+  height: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.logo {
-  font-size: 1.9rem;
+.nav-name1 {
+  height: 70px;
+  width: auto;
+  mix-blend-mode: color-burn;
+  transform: scale(1.7);
 }
 .foot-pannel4 {
   background-color: #0f1111;
@@ -1011,4 +1019,63 @@ footer {
   font-size: 0.8rem;
 }
 
-/* meqia qurry */
+/* logo color */
+
+.fa-twitter {
+  color: #007bff;
+  transform: scale(1.4);
+  margin-left: 19px;
+}
+
+.fa-whatsapp {
+  color: #266c35;
+  transform: scale(1.4);
+  margin-left: 5px;
+}
+.fa-facebook {
+  color: #004494;
+  transform: scale(1.4);
+  margin-left: 5px;
+}
+.fa-instagram {
+  color: transparent;
+  background: -webkit-radial-gradient(
+    30% 107%,
+    circle,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background: -o-radial-gradient(
+    30% 107%,
+    circle,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background: -webkit-radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  transform: scale(1.4);
+  margin-left: 5px;
+}
