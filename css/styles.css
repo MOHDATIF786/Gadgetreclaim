@@ -944,6 +944,81 @@ footer {
   text-decoration: underline 1.6px black;
 }
 
+/* MAEQUEE */
+
+.brand-animation {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Full-width container */
+  height: 79px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Moving logos */
+.brand-animation .marquee {
+  display: flex;
+  align-items: center;
+  animation: slide 10s linear infinite;
+}
+
+.brand-animation .logo {
+  height: 70px;
+  margin-right: 30px; /* Spacing between logos */
+  margin-top: 3px;
+  background-size: contain; /* Ensures the logo fits within the container */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff; /* Ensures transparent logos are visible */
+  aspect-ratio: 3/2;
+  transform: scale(1.1);
+}
+
+/* Logos as background images */
+.logo.apple {
+  background-image: url("/img/Apple-Logo.png");
+}
+.logo.samsung {
+  background-image: url("/img/samsung1.jpg");
+}
+.logo.dell {
+  background-image: url("/img/dell1.png");
+}
+.logo.hp {
+  background-image: url("/img/HP.png");
+}
+.logo.asus {
+  background-image: url("/img/mi.png");
+}
+.logo.lenovo {
+  background-image: url("/img/lenovo.jpg");
+}
+.logo.oneplus {
+  background-image: url("/img/1+.png");
+}
+.logo.microsoft {
+  background-image: url("/img/vivo1.png");
+}
+.logo.google {
+  background-image: url("/img/gogole2.webp");
+}
+.logo.acer {
+  background-image: url("/img/oppo2.png");
+}
+.realme {
+  background-image: url("/img/realme.png");
+}
+
+/* Keyframe for seamless sliding animation */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 /* foot er */
 
 .foot-pannel1 {
