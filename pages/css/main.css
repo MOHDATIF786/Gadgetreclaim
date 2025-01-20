@@ -78,6 +78,122 @@ body {
 .nav-whish i {
   font-size: 25px;
 }
+.nav-item2 {
+  position: relative;
+  list-style: none;
+}
+
+/* Add arrows to main navbar items */
+.nav-item2 > a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 19px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item2 > a::after {
+  content: "▼"; /* Downward arrow for main navbar */
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item2:hover > a::after {
+  transform: rotate(180deg); /* Rotate arrow when hovering */
+}
+
+.nav-item2 a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Menu */
+.dropdown-menu2 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px;
+}
+
+.dropdown-menu2 li {
+  position: relative;
+  list-style: none; /* Remove bullet points */
+}
+
+.dropdown-menu2 li a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between; /* Align arrow to the right */
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu2 li a:hover {
+  background-color: #f4f4f9;
+}
+
+/* Add arrows to dropdown items */
+.dropdown-menu2 li a::after {
+  content: "›"; /* Rightward arrow for dropdown items */
+  font-size: 12px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-item2:hover > a::after {
+  transform: rotate(90deg); /* Rotate arrow for nested items */
+}
+
+/* Show Dropdown on Hover */
+.nav-item2:hover > .dropdown-menu2 {
+  display: block;
+}
+
+.dropdown-item2:hover > .dropdown-menu2 {
+  display: block;
+}
+
+/* Nested Dropdown Menu */
+.dropdown-item2 .dropdown-menu2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fa-user-tie {
+  transform: scale(1.4);
+  margin-right: 13px;
+}
 /** navbar 1**/
 .nav-links {
   width: 100%;
@@ -89,9 +205,9 @@ body {
   align-items: center;
   gap: 30px;
 }
-
 .nav-item {
   position: relative;
+  list-style: none;
 }
 .nav-item1 > a {
   color: rgb(2, 2, 2);
