@@ -1,4 +1,26 @@
-// Variables
+// location
+const locationButton = document.getElementById("location-btn");
+const locationPopup = document.getElementById("location-popup");
+const newPopupButtonClose = document.getElementById("new-popup-button-close");
+const cityList = document.getElementById("city-list");
+
+locationButton.addEventListener("click", () => {
+  locationPopup.classList.add("visible");
+});
+
+newPopupButtonClose.addEventListener("click", () => {
+  locationPopup.classList.remove("visible");
+});
+
+cityList.addEventListener("click", (event) => {
+  const cityItem = event.target.closest(".city-item");
+  if (cityItem) {
+    const cityName = cityItem.getAttribute("data-city");
+    locationButton.textContent = cityName;
+    locationPopup.classList.remove("visible");
+  }
+});
+// Variables img slider
 const previous = document.getElementById("previous");
 const imageHolder = document.getElementById("imageHolder");
 const imageLink = document.getElementById("imageLink");

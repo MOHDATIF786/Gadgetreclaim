@@ -30,10 +30,64 @@
           <i class="fa-solid fa-cart-shopping"></i>
           Cart
         </div>
-        <div class="nav-whish ">
-            <i class="fa-solid fa-heart"></i>
-            Wishlist
-          </div>
+          <div class="location-wrapper">
+          <i class="fa-solid fa-location-dot"></i>
+        <button class="location-button" id="location-btn">Location</button>
+        <div class="location-popup" id="location-popup">
+            <div class="popup-header">
+                <img src="/pages/img/logo1.png" alt="Logo">
+                <button class="new-popup-button-close" id="new-popup-button-close">&times;</button>
+            </div>
+            <hr><br>
+            <h2>Select Your Location</h2>
+            <div class="popup-search">
+            <input type="text" placeholder="Search your city or pincode">
+              <i class="fa-solid fa-magnifying-glass" id="newpopup"></i>
+        </div>
+            <p class="choose-city-text">Popular Cities</p>
+            <div class="city-list" id="city-list">
+                <div class="city-item" data-city="Bangalore">
+                    <img src="/pages/img/bang.svg" alt="Bangalore">
+                    <p>Bangalore</p>
+                </div>
+                <div class="city-item" data-city="Chennai">
+                    <img src="/pages/img/chni.svg" alt="Chennai">
+                    <p>Chennai</p>
+                </div>
+                <div class="city-item" data-city="Delhi">
+                    <img src="/pages/img/delhi.svg" alt="Delhi">
+                    <p>Delhi</p>
+                </div>
+                <div class="city-item" data-city="Gurgaon">
+                    <img src="/pages/img/gurgaoo.svg" alt="Gurgaon">
+                    <p>Gurgaon</p>
+                </div>
+                <div class="city-item" data-city="Hyderabad">
+                    <img src="/pages/img/hadra.svg" alt="Hyderabad">
+                    <p>Hyderabad</p>
+                </div>
+                <div class="city-item" data-city="Kolkata">
+                    <img src="/pages/img/koljkata.svg" alt="Kolkata">
+                    <p>Kolkata</p>
+                </div>
+                <div class="city-item" data-city="Mumbai">
+                    <img src="/pages/img/mumbai.svg" alt="Mumbai">
+                    <p>Mumbai</p>
+                </div>
+                <div class="city-item" data-city="Noida">
+                    <img src="/pages/img/noida.svg" alt="Noida">
+                    <p>Noida</p>
+                </div>
+                <div class="city-item" data-city="Pune">
+                    <img src="/pages/img/pune.svg" alt="Pune">
+                    <p>Pune</p>
+                </div>
+            </div>
+            <div class="view-more-link">
+                <a href="#">View All Cities</a>
+            </div>
+        </div>
+    </div>
           <div>
             <li class="nav-item2">
                 <a href="#"> <i class="fa-solid fa-user-tie"></i> Atif </a>
@@ -41,6 +95,7 @@
                   <li class="dropdown-item2">
                     <a href="#">Your orders</a>
                   <li><a href="#">Payment Option</a></li>
+                  <li><a href="#">Wish List</a></li>
                   <li><a href="#">Saved Address</a></li>
                   <li><a href="#">My Earnings</a></li>
                   <li><a href="#">Logout</a></li>
@@ -48,6 +103,7 @@
               </li>
           </div>
               </div>
+              <!-- navbar 1 -->
         <div class="navbar1">
             <ul class="nav-links">
                 <li class="nav-item1"><a href="#">Home <i class="fa-solid fa-house"></i></a></li>
