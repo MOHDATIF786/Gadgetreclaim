@@ -218,15 +218,17 @@ input[type="email"] {
 }
 
 .sign {
-  width: 100%;
-  padding: 1rem;
+  padding: 1.1rem 5rem;
   border-radius: 10px;
   background-color: #4caf50;
   color: rgb(21, 20, 20);
   font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-left: 80px;
 }
 
 .sign:hover {

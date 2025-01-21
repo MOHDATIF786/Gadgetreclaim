@@ -104,6 +104,7 @@ function closePopup() {
   const overlay = document.getElementById("popupOverlay");
   overlay.style.display = "none";
 }
+
 // card slider
 const sliderContainer1 = document.querySelector(".slider-container-1");
 const cards = document.querySelectorAll(".slider-card-1");
