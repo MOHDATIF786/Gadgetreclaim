@@ -173,4 +173,24 @@ nextControl.addEventListener("click", () => {
 
 window.addEventListener("resize", updateTrack); // Adjust on window resize
 
-//
+//more
+const triggerBtn2 = document.querySelector(".trigger-btn");
+const popupContainer2 = document.getElementById("popup-container2");
+const closePopup2 = document.getElementById("closePopup2");
+
+// Open popup
+triggerBtn2.addEventListener("click", () => {
+  popupContainer2.classList.add("active");
+});
+
+// Close popup
+closePopup2.addEventListener("click", () => {
+  popupContainer2.classList.remove("active");
+});
+
+// Close popup when clicking outside of it
+window.addEventListener("click", (e) => {
+  if (e.target === popupContainer2) {
+    popupContainer2.classList.remove("active");
+  }
+});
