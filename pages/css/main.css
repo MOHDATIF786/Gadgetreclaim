@@ -202,6 +202,91 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+/* all city */
+.all-cities-dropdown {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+  background: #bdc3c7;
+  border: 1px solid #ddd;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  padding: 20px;
+  z-index: 1001;
+  transition: top 0.3s ease-in-out;
+}
+.location-header img {
+  height: 70px;
+  width: 15rem;
+  mix-blend-mode: color-burn;
+  transform: scale(1.2);
+}
+.close-button {
+  margin-left: 1200px;
+  transform: scale(1);
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.all-cities-dropdown.visible {
+  display: block;
+  top: 0;
+}
+
+.all-cities-dropdown input {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 18px;
+}
+
+.alphabet-filter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.alphabet-filter span {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.alphabet-filter span:hover,
+.alphabet-filter span.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.city-list1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.city-list1 div {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.city-list1 div:hover {
+  background-color: #f0f0f0;
+}
 /* user */
 .nav-item2 {
   position: relative;
