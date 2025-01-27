@@ -769,6 +769,7 @@ body {
 }
 .popup-container2.active {
   right: 0;
+  z-index: 1000;
 }
 
 /* Close button */
