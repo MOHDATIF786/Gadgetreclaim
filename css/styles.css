@@ -637,7 +637,7 @@ input[type="email"] {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
   transition: right 0.4s ease;
-  padding: 20px;
+  padding: 27px;
 }
 .popup-container2 h2 {
   margin-bottom: 30px;
