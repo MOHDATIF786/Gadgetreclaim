@@ -79,7 +79,6 @@ body {
   font-size: 25px;
 }
 
-/* From Uiverse.io by xueyuantan */
 .log {
   width: 9em;
   height: 3em;
@@ -1264,11 +1263,11 @@ footer {
 .fa-magnifying-glass {
   color: rgb(0, 0, 0);
 }
-.fa-heart {
+/* .fa-heart {
   color: #2e2a2a;
   transform: scale(1.3);
   margin-right: 6px;
-}
+} */
 .fa-cart-shopping {
   color: #2e2a2a;
   transform: scale(1.3);
