@@ -240,7 +240,7 @@ input[type="email"] {
   color: #0c0c0c;
 }
 
-.line {
+.line2 {
   display: inline-block;
   width: 40%;
   border-bottom: 1px solid #ddd;
@@ -312,7 +312,7 @@ input[type="email"] {
 .nav-item > a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
   padding: 10px 20px;
   font-weight: 500;
   transition: all 0.3s ease;
