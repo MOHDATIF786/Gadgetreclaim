@@ -15,6 +15,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
 }
 .nav-name {
   height: 70px;
@@ -287,6 +291,7 @@ input[type="email"] {
   justify-content: center;
   align-items: center;
   gap: 35px;
+  margin-top: 72px;
 }
 
 .nav-item {
@@ -377,7 +382,7 @@ input[type="email"] {
 
 /* Add arrows to dropdown items */
 .dropdown-menu li a::after {
-  content: "›"; /* Rightward arrow for dropdown items */
+  content: "✓"; /* Rightward arrow for dropdown items */
   font-size: 12px;
   color: #333;
   transition: transform 0.3s ease;
