@@ -33,15 +33,12 @@ body {
   justify-content: space-evenly;
   width: 500px;
   height: 40px;
-  border-radius: 4px;
-  border: 2px solid black;
+  border: 2px solid #000000;
 }
 .search-select {
   background-color: #f3f3f3;
   width: 50px;
   text-align: center;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
   border: none;
 }
 .search-input {
@@ -55,14 +52,12 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  background-color: #eac28f;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  background-color: #b4b4b4;
   border: none;
   color: #0f1111;
 }
 .nav-search:hover {
-  border: 2.5px solid #ba8652;
+  border: 2.5px solid #000000;
   border-radius: 6px;
 }
 /** box 6**/

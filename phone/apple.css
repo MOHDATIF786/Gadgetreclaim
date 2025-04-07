@@ -33,15 +33,12 @@ body {
   justify-content: space-evenly;
   width: 500px;
   height: 40px;
-  border-radius: 4px;
   border: 2px solid black;
 }
 .search-select {
   background-color: #f3f3f3;
   width: 50px;
   text-align: center;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
   border: none;
 }
 .search-input {
@@ -54,15 +51,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  background-color: #eac28f;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  background-color: #b4b4b4;
   border: none;
   color: #0f1111;
 }
 .nav-search:hover {
-  border: 2.5px solid #ba8652;
+  border: 2.5px solid #000000;
   border-radius: 6px;
 }
 /** box 6**/
@@ -549,4 +543,99 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* coustome container */
+.custom-container {
+  padding: 36px 95px;
+  width: 100%;
+  background-color: #eee;
+}
+
+.custom-container h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.custom-breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.custom-breadcrumb a {
+  text-decoration: none;
+  color: #888;
+}
+
+.custom-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.custom-top-bar h2 {
+  font-size: 27px;
+  margin: 10px 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.custom-search-box {
+  position: relative;
+  width: 290px;
+  margin-bottom: 15px;
+}
+
+.custom-search-box input {
+  padding: 13px 15px 12px 32px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-search-box .fa-search {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 14px;
+}
+
+.custom-model-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  justify-content: center;
+}
+
+.custom-model-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: -12px -12px 7px -12px rgba(0, 0, 0, 0.43);
+  text-align: center;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.custom-model-card:hover {
+  box-shadow: 12px 12px 7px -12px rgba(0, 0, 0, 0.43);
+  transform: translateY(-3px);
+}
+
+.custom-model-card img {
+  width: 190px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.custom-model-card p {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0;
 }

@@ -2495,3 +2495,16 @@ document.addEventListener("DOMContentLoaded", () => {
   populateCityList();
   populateAlphabetFilter();
 });
+
+//costoem container
+function customFilterModels() {
+  const input = document
+    .getElementById("customSearchInput")
+    .value.toLowerCase();
+  const cards = document.querySelectorAll(".custom-model-card");
+
+  cards.forEach((card) => {
+    const modelText = card.textContent.toLowerCase();
+    card.style.display = modelText.includes(input) ? "block" : "none";
+  });
+}
