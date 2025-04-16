@@ -271,10 +271,10 @@
       
         <div class="support-buttons">
           <button onclick="openWhatsapp()">
-            <span>🟢</span> Whatsapp
+            <span><i class="fa-brands fa-whatsapp"></i></span> Whatsapp
           </button>
           <button onclick="openChat()">
-            <span>💬</span> Live Chat
+            <span><i class="fa-solid fa-message"></i></span> Live Chat
           </button>
         </div>
       
@@ -283,13 +283,13 @@
         <div class="reach-grid">
           <div class="reach-section">
             <b>Connect With us:</b>
-            For support or any questions: call us on Cashify customer support number - 7290068900 or Email us at 
-            <a href="mailto:support@cashify.in">support@cashify.in</a> for Sell Queries.
+            For support or any questions: call us on GadgetReclaim support number - 7290068900 or Email us at 
+            <a href="mailto:support@gadget.in">support@GadgetReclaim.in</a> for Sell Queries.
           </div>
       
           <div class="reach-section">
             <b>Corporate Office:</b>
-            Cashify 1st Floor, Plot No.35, Sector 44, Gurugram, Haryana 122003
+            GadgetReclaim Floor 4, Plot No.35, Sector 44, Gurugram, Haryana 122003
           </div>
       
           <div class="reach-section">
@@ -300,14 +300,14 @@
           <div class="reach-section">
             <b>Connect with us:</b>
             For Buy Phone related queries: Call us on +91-9319697452 or Email us at 
-            <a href="mailto:store@cashify.in">store@cashify.in</a>.
+            <a href="mailto:store@cashify.in">store@GadgetReclaim.in</a>.
             <br>For Warranty/Returns related queries: Call us on +91-8448797261 or Email us at 
-            <a href="mailto:return@cashify.in">return@cashify.in</a>
+            <a href="mailto:return@cashify.in">return@GadgetReclaim.in</a>
           </div>
       
           <div class="reach-section">
             <b>Corporate Office:</b>
-            Cashify 1st Floor, Plot No.35, Sector 44, Gurugram, Haryana 122003
+            GadgetReclaim 1st Floor, Plot No.35, Sector 44, Gurugram, Haryana 122003
           </div>
       
           <div class="reach-section">
@@ -316,6 +316,45 @@
           </div>
         </div>
       </div>
+
+      <!-- feed back -->
+     
+  <div class="feedback-section">
+    <div class="feedback-header">
+      <div class="title">Feedback / Report an Issue</div>
+    </div>
+
+    <form id="feedbackForm" class="feedback-form">
+      <div class="form-group">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" id="name" class="form-control" required placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" id="email" class="form-control" required placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="type" class="form-label">Type of Issue</label>
+        <select id="type" class="form-control" required>
+          <option value="">Select type</option>
+          <option value="bug">Bug / Technical Issue</option>
+          <option value="feedback">Feedback / Suggestion</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" class="form-control" required placeholder="Describe the issue or feedback in detail..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+      <div class="success-message" id="successMessage">Thank you! Your message has been submitted.</div>
+    </form>
+  </div>
+
  <!-- footer  -->
   <footer>
     <div class="foot-pannel1"><a href="#">Back to top</a></div>

@@ -2504,3 +2504,17 @@ function openWhatsapp() {
 function openChat() {
   alert("Live Chat feature coming soon!");
 }
+
+// feed back
+const form = document.getElementById("feedbackForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  // Normally, here you'd send the data to a server (like AWS Lambda)
+  form.reset();
+  successMessage.style.display = "block";
+  setTimeout(() => {
+    successMessage.style.display = "none";
+  }, 4000);
+});
