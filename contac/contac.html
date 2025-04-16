@@ -324,20 +324,21 @@
       <div class="title">Feedback / Report an Issue</div>
     </div>
 
-    <form id="feedbackForm" class="feedback-form">
+    <form id="feedbackForm" class="feedback-form" method="POST" >
+      <input type="hidden" name="access_key"   value="9ea37d65-020a-4248-8471-bcebbdf71217">
       <div class="form-group">
         <label for="name" class="form-label">Your Name</label>
-        <input type="text" id="name" class="form-control" required placeholder="Enter your name">
+        <input type="text"  name="name" id="name" class="form-control" required placeholder="Enter your name">
       </div>
 
       <div class="form-group">
         <label for="email" class="form-label">Your Email</label>
-        <input type="email" id="email" class="form-control" required placeholder="Enter your email">
+        <input type="email" name="email" id="email" class="form-control" required placeholder="Enter your email">
       </div>
 
       <div class="form-group">
         <label for="type" class="form-label">Type of Issue</label>
-        <select id="type" class="form-control" required>
+        <select id="type"  name="type" class="form-control" required>
           <option value="">Select type</option>
           <option value="bug">Bug / Technical Issue</option>
           <option value="feedback">Feedback / Suggestion</option>
@@ -347,11 +348,12 @@
 
       <div class="form-group">
         <label for="description" class="form-label">Description</label>
-        <textarea id="description" class="form-control" required placeholder="Describe the issue or feedback in detail..."></textarea>
+        <textarea id="description" name="message" class="form-control" required placeholder="Describe the issue or feedback in detail..."></textarea>
       </div>
-
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
       <button type="submit" class="submit-btn">Submit</button>
-      <div class="success-message" id="successMessage">Thank you! Your message has been submitted.</div>
+      <div id="result"></div>
+      <!-- <div class="success-message" id="successMessage">Thank you! Your message has been submitted.</div> -->
     </form>
   </div>
 
