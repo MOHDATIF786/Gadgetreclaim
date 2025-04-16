@@ -2646,24 +2646,29 @@ nextControl.addEventListener("click", () => {
 window.addEventListener("resize", updateTrack); // Adjust on window resize
 
 //
+
 //more
 const triggerBtn2 = document.querySelector(".trigger-btn");
 const popupContainer2 = document.getElementById("popup-container2");
 const closePopup2 = document.getElementById("closePopup2");
+const overlay = document.getElementById("overlay");
 
 // Open popup
 triggerBtn2.addEventListener("click", () => {
   popupContainer2.classList.add("active");
+  overlay.classList.add("active");
 });
 
 // Close popup
-closePopup2.addEventListener("click", () => {
+function closeModal() {
   popupContainer2.classList.remove("active");
-});
+  overlay.classList.remove("active");
+}
 
-// Close popup when clicking outside of it
-window.addEventListener("click", (e) => {
-  if (e.target === popupContainer2) {
-    popupContainer2.classList.remove("active");
-  }
+closePopup2.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+// Close on ESC
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
 });

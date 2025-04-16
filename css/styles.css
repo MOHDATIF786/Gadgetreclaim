@@ -629,6 +629,25 @@ input[type="email"] {
   color: #333;
   text-align: center;
 }
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+/* Show overlay */
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 /* Popup styles */
 .popup-container2 {
   position: fixed;
