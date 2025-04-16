@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GadgetReclaim.com</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon"
+        type="images/icon"
+        href="img/logo2.png" >
+    <link rel="stylesheet" href="/sell phone/sellphone.css">
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <img src="img/logo1.png" alt="" class="nav-name">
+        <div class="nav-search">
+          <input placeholder="Search" class="search-input" />
+          <div class="search-icon border">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="nav-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Cart
+        </div>
+          <div class="location-wrapper">
+          <i class="fa-solid fa-location-dot"></i>
+        <button class="location-button" id="location-btn">Location</button>
+        <div class="location-popup" id="location-popup">
+            <div class="popup-header">
+                <img src="/pages/img/logo1.png" alt="Logo">
+                <button class="new-popup-button-close" id="new-popup-button-close">&times;</button>
+            </div>
+            <hr><br>
+            <h2>Select Your Location</h2>
+            <div class="popup-search">
+            <input type="text" placeholder="Search your city or pincode">
+              <i class="fa-solid fa-magnifying-glass" id="newpopup"></i>
+        </div>
+            <p class="choose-city-text">Popular Cities</p>
+            <div class="city-list" id="city-list">
+                <div class="city-item" data-city="Bangalore">
+                    <img src="/pages/img/bang.svg" alt="Bangalore">
+                    <p>Bangalore</p>
+                </div>
+                <div class="city-item" data-city="Chennai">
+                    <img src="/pages/img/chni.svg" alt="Chennai">
+                    <p>Chennai</p>
+                </div>
+                <div class="city-item" data-city="Delhi">
+                    <img src="/pages/img/delhi.svg" alt="Delhi">
+                    <p>Delhi</p>
+                </div>
+                <div class="city-item" data-city="Gurgaon">
+                    <img src="/pages/img/gurgaoo.svg" alt="Gurgaon">
+                    <p>Gurgaon</p>
+                </div>
+                <div class="city-item" data-city="Hyderabad">
+                    <img src="/pages/img/hadra.svg" alt="Hyderabad">
+                    <p>Hyderabad</p>
+                </div>
+                <div class="city-item" data-city="Kolkata">
+                    <img src="/pages/img/koljkata.svg" alt="Kolkata">
+                    <p>Kolkata</p>
+                </div>
+                <div class="city-item" data-city="Mumbai">
+                    <img src="/pages/img/mumbai.svg" alt="Mumbai">
+                    <p>Mumbai</p>
+                </div>
+                <div class="city-item" data-city="Noida">
+                    <img src="/pages/img/noida.svg" alt="Noida">
+                    <p>Noida</p>
+                </div>
+                <div class="city-item" data-city="Pune">
+                    <img src="/pages/img/pune.svg" alt="Pune">
+                    <p>Pune</p>
+                </div>
+            </div>
+            <div class="view-more-link">
+                <a href="#" id="view-all-button">View All Cities</a>
+            </div>
+        </div>
+        <div class="all-cities-dropdown" id="all-cities-dropdown">
+          <div class="location-header">
+              <img src="img/logo1.png" alt="logo">
+              <button class="close-button" id="all-close-button">&times;</button>
+          </div>
+          <input type="text" placeholder="Search by city name" id="all-search-bar">
+          <div class="alphabet-filter" id="alphabet-filter"></div>
+          <div class="city-list1" id="all-city-list"></div>
+      </div>
+      
+    </div>
+          <div>
+            <li class="nav-item2">
+                <a href="#"> <i class="fa-solid fa-user-tie"></i> Atif </a>
+                <ul class="dropdown-menu2">
+                  <li class="dropdown-item2">
+                    <a href="#">Your orders</a>
+                  <li><a href="#">Payment Option</a></li>
+                  <li><a href="#">Wish List</a></li>
+                  <li><a href="#">Saved Address</a></li>
+                  <li><a href="#">My Earnings</a></li>
+                  <li><a href="/index.html">Logout</a></li>
+                </ul>
+              </li>
+          </div>
+              </div>
+                <!-- navbar 1 -->
+          <div class="navbar1">
+            <ul class="nav-links">
+                <li class="nav-item1"><a href="/pages/main.html">Home <i class="fa-solid fa-house"></i></a></li>
+
+              <!--sell phone-->
+              <li class="nav-item">
+                <a href="#">Sell Phones</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/phone/apple.html">Apple </a></li>
+                  <li><a href="#">Samsung</a></li>
+                  <li><a href="#">Oneplus</a></li>
+                  <li><a href="#">Xiaomi</a></li>
+                  <li><a href="#">Nothing</a></li>
+                  <li><a href="#">Google</a></li>
+                  <li><a href="#">More</a></li>
+                </ul>
+              </li>
+                <!-- sell laptop -->
+                <li class="nav-item">
+                  <a href="#">Sell Laptops
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Apple </a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Dell</a></li>
+                    <li><a href="#">Lenovo</a></li>
+                    <li><a href="#">Asus</a></li>
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">More</a></li>
+                  </ul>
+                </li>
+                  <!-- sell gadget -->
+                  <li class="nav-item">
+                    <a href="#">Sell gadget</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Smartwatches</a></li>
+                      <li><a href="#">Smart speaker</a></li>
+                      <li><a href="#">Tablet</a></li>
+                      <li><a href="#">Gaming console</a></li>
+                      <li><a href="#">Imac</a></li>
+                      <li><a href="#">T.V</a></li>
+                      <li><a href="#">Earbud</a></li>
+                      <li><a href="#">DSLR</a></li>
+                      <li><a href="#">A.C</a></li>
+                    </ul>
+                  </li>
+                  <!-- buy phone -->
+                  <li class="nav-item">
+                    <a href="#">Buy Phones</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/phone/buyapple.html">Apple </a></li>
+                      <li><a href="#">Samsung</a></li>
+                      <li><a href="#">Oneplus</a></li>
+                      <li><a href="#">Xiaomi</a></li>
+                      <li><a href="#">Nothing</a></li>
+                      <li><a href="#">Google</a></li>
+                      <li><a href="#">More</a></li>
+                    </ul>
+                  </li>
+                  <!-- buy laptop  -->
+                  <li class="nav-item">
+                    <a href="#">Buy laptop</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Apple </a></li>
+                      <li><a href="#">Samsung</a></li>
+                      <li><a href="#">Dell</a></li>
+                      <li><a href="#">Lenovo</a></li>
+                      <li><a href="#">Asus</a></li>
+                      <li><a href="#">Google</a></li>
+                      <li><a href="#">More</a></li>
+                    </ul>
+                  </li>
+                  <!-- repair -->
+                  <li class="nav-item">
+                    <a href="#">Repair </a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item">
+                        <a href="#">Phone</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-item">
+                            <a href="#">Screen</a>
+                          </li>
+                          <li class="dropdown-item">
+                            <a href="#">Battery</a>
+                          </li>
+                          <li><a href="#">Back Pannel</a></li>
+                          <li><a href="#">Sensor</a></li>
+                          <li><a href="#">Charging Jack</a></li>
+                        </ul>
+                      </li>
+                      <li  class="dropdown-item">
+                        <a href="#">Laptop</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-item">
+                          <a href="#">Screen</a> </li>
+                          <li><a href="#">Battery</a></li>
+                          <li><a href="#">Back Pannel</a></li>
+                          <li><a href="#">Sensor</a></li>
+                          <li><a href="#">Charging Jack</a></li>
+                          <li><a href="#">Aux Jack</a></li>
+                        </ul>
+                      </li>
+                      <li  class="dropdown-item">
+                        <a href="#">Tablet</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-item">
+                          <a href="#">Screen</a> </li>
+                          <li><a href="#">Battery</a></li>
+                          <li><a href="#">Back Pannel</a></li>
+                          <li><a href="#">Sensor</a></li>
+                          <li><a href="#">Charging Jack</a></li>
+                          <li><a href="#">Aux Jack</a></li>
+                        </ul>
+                      </li>
+                      <li  class="dropdown-item">
+                        <a href="#">Smartwatches</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-item">
+                          <a href="#">Screen</a> </li>
+                          <li><a href="#">Battery</a></li>
+                          <li><a href="#">Back Pannel</a></li>
+                          <li><a href="#">Sensor</a></li>
+                          <li><a href="#">Charging Jack</a></li>
+                          <li><a href="#">Carger</a></li>
+                        </ul>
+                      </li>
+                      <li  class="dropdown-item">
+                        <a href="#">Speaker</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-item">
+                          <a href="#">Buffer</a> </li>
+                          <li><a href="#">Battery</a></li>
+                          <li><a href="#">Back Pannel</a></li>
+                          <li><a href="#">Buttons</a></li>
+                          <li><a href="#">Charging Jack</a></li>
+                          <li><a href="#">Aux Jack</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+              <!-- About -->
+              <li class="nav-item1">
+                <a href="/about/about.html">About Us <i class="fa-regular fa-address-card"></i></a> 
+              </li>
+        
+              <!-- Contact -->
+              <li class="nav-item1">
+                <a href="/contac/contac.html">Contact <i class="fa-solid fa-phone"></i></a></li>
+          </div>
+        </header>
+
+<!-- hear -->
+
+<div class="container">
+    <div class="text-section">
+      <p><a href="/pages/main.html">Home </a>> Sell Old Mobile Phone</p>
+      <h1>Sell your Mobile Phone for <br><strong>Instant Cash</strong></h1>
+      <div class="features">
+        <span>&#10003; Maximum Value</span>
+        <span>&#10003; Safe & Hassle-free</span>
+        <span>&#10003; Free Doorstep Pickup</span>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="phoneSearch" placeholder="Search your Mobile Phone to sell" oninput="handleSearch()" autocomplete="off">
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+
+      <div class="brands">
+        <h3>-------OR Choose A Brand--------</h3>
+        <br>
+        <div class="brand-list">
+          <a href="/phone/apple.html"><div class="brand-item">Apple</div></a>
+          <div class="brand-item">Mi</div>
+          <div class="brand-item">Samsung</div>
+          <div class="brand-item">Vivo</div>
+          <div class="brand-item">More Brands</div>
+        </div>
+    
+      </div>
+    </div>
+
+    <div class="image-section">
+      <img src="/sell phone/img/nn.webp" alt="Man holding phone and cash">
+    </div>
+  </div>
+<!-- how it work -->
+
+<div class="how-it-works">
+    <h2>How GadgetReclaim Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="/sell phone/img/w1.webp" alt="Check Price" />
+        <h3>1 Check Price</h3>
+        <p>Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect price for you.</p>
+      </div>
+      <div class="step">
+        <img src="/sell phone/img/w2.webp" alt="Schedule Pickup" />
+        <h3>2 Schedule Pickup</h3>
+        <p>Book a free pickup from your home or work at a time slot that best suits your convenience.</p>
+      </div>
+      <div class="step">
+        <img src="img/w3.webp" alt="Get Paid" />
+        <h3>3 Get Paid</h3>
+        <p>Did we mention you get paid as soon as our executive picks up your device? It's instant payment all the way!</p>
+      </div>
+    </div>
+  </div>
+         <!-- footer  -->
+      <footer>
+        <div class="foot-pannel1"><a href="#">Back to top</a></div>
+        <div class="foot-pannel2">
+          <ul>
+            <p class="underline">Get to know us</p>
+            <a href=""> Careers</a>
+            <a href=""> Blog</a>
+            <a href=""> About GadgetReclaim</a>
+            <a href=""> Investor Relations</a>
+          </ul>
+          <ul>
+            <p class="underline">Service</p>
+            <a href=""> Sell Phone</a>
+            <a href=""> Sell Television </a>
+            <a href=""> Sell Smart Watches </a>
+            <a href=""> Sell speaker</a>
+            <a href=""> Sell DSLR </a>
+            <a href=""> Sell Earbud</a>
+            <a href=""> Repair phone</a>
+            <a href=""> Buy phone </a>
+            <a href=""> Recycle phone </a>
+            <a href=""> Find New Phone </a>
+            <a href=""> Partner with us </a>
+          </ul>
+          <ul>
+            <p class="underline">More INFO</p>
+            <a href=""> Terms & Condition</a>
+            <a href=""> Privacy & Policy</a>
+            <a href=""> Term of use</a>
+            <a href=""> Cookie Policyr</a>
+            <a href=""> Device Safety</a>
+            <a href=""> What is Refurbish</a>
+          </ul>
+          <ul>
+            <p class="underline">Let us help you</p>
+            <a href=""> F&Q</a>
+            <a href=""> your account</a>
+            <a href=""> your orders</a>
+            <a href=""> Contact US</a>
+            <a href=""> Return and Replacement</a>
+            <a href=""> Help</a>
+          </ul>
+          <ul class="handels">
+            <p class="underline">Social Media handels
+            </p>
+            <a href="https://www.instagram.com/"> Instagram  <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/?lang=en-in"> Twitter <i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/"> Facebook <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://web.whatsapp.com/"> Whatsapp <i class="fa-brands fa-whatsapp"></i></a>
+          </ul>
+        </div>
+        <div class="foot-pannel3">
+          <img src="img/logo1.png" alt="" class="nav-name1">
+        </div>
+        <div class="foot-pannel4">
+          <div class="copyright">
+             CopyRight ©2025 GAdgetReclaim All right reserved    
+            </div>
+        </div>
+      </footer>
+      <script src="/sell phone/sellphone.js"></script>
+  </body>
+  </html>
