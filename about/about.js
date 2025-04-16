@@ -2495,3 +2495,12 @@ document.addEventListener("DOMContentLoaded", () => {
   populateCityList();
   populateAlphabetFilter();
 });
+
+// chat
+function openWhatsapp() {
+  window.open("https://wa.me/7290068900", "_blank");
+}
+
+function openChat() {
+  alert("Live Chat feature coming soon!");
+}

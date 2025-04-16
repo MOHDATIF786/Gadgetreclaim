@@ -544,10 +544,73 @@ body {
     transform: translateY(0);
   }
 }
-/*  */
-/* 
- */
-/*  */
+
+/* chat */
+
+.parent {
+  background-color: #e7e7e7;
+  width: 100%;
+  height: 600px;
+  padding: 25px;
+}
+.m {
+  height: 20px;
+}
+.parent h2,
+h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.support-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.support-buttons button {
+  background: #f2f2f2;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.reach-section {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.reach-section b {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.reach-section a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+.reach-section a:hover {
+  text-decoration: underline;
+}
+
 /* foot er */
 .foot-pannel1 {
   background-color: #e4e9f484;
