@@ -121,8 +121,8 @@ body {
 }
 
 .popup-header img {
-  height: 70px;
-  width: 15rem;
+  height: 100px;
+  width: 19rem;
   mix-blend-mode: color-burn;
   transform: scale(1.2);
 }
