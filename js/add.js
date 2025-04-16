@@ -80,7 +80,8 @@ function runGalleryAuto() {
 
 runGalleryAuto();
 
-// pop up
+// // pop up
+
 function openPopup(formType) {
   const overlay = document.getElementById("popupOverlay");
   const popup = document.getElementById("popup");
@@ -104,6 +105,50 @@ function closePopup() {
   const overlay = document.getElementById("popupOverlay");
   overlay.style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.getElementById("loginForm");
+
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default submit
+
+    const usernameInput = document.getElementById("username").value.trim();
+    const passwordInput = document.getElementById("password").value;
+
+    const correctUsername = "Atif"; // ✅ Your correct login
+    const correctPassword = "7977";
+
+    if (
+      usernameInput === correctUsername &&
+      passwordInput === correctPassword
+    ) {
+      // ✅ Redirect to main.html
+      window.location.href = "/pages/main.html";
+    } else {
+      // ❌ Show alert on wrong credentials
+      alert("Invalid username or password!");
+    }
+  });
+});
+// Signup Form Handling
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the default form submission
+
+  const username = document.getElementById("signupUsername").value.trim();
+  const email = document.getElementById("signupEmail").value.trim();
+  const password = document.getElementById("signupPassword").value;
+
+  // Check if all fields are filled
+  if (username && email && password) {
+    // All details are filled
+    alert("Signup successful! Redirecting to login...");
+    // Redirect to the main page after a successful signup
+    window.location.href = "/pages/main.html"; // Change this to your desired page
+  } else {
+    // If any field is missing, show an error message
+    alert("Please fill in all fields!");
+  }
+});
 
 // card slider
 const sliderContainer1 = document.querySelector(".slider-container-1");
