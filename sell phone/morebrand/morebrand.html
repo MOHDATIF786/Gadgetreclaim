@@ -14,7 +14,7 @@
     <link rel="icon"
         type="images/icon"
         href="img/logo2.png" >
-    <link rel="stylesheet" href="/sell phone/sellphone.css">
+    <link rel="stylesheet" href="/sell phone/morebrand/morebrand.css">
 </head>
 <body>
     <header>
@@ -164,7 +164,7 @@
                   <li class="nav-item">
                     <a href="#">Buy Phones</a>
                     <ul class="dropdown-menu">
-                      <li><a href="/phone/buyapple.html">Apple </a></li>
+                      <li><a href="#">Apple </a></li>
                       <li><a href="#">Samsung</a></li>
                       <li><a href="#">Oneplus</a></li>
                       <li><a href="#">Xiaomi</a></li>
@@ -264,43 +264,45 @@
                 <a href="/contac/contac.html">Contact <i class="fa-solid fa-phone"></i></a></li>
           </div>
         </header>
-
-<!-- hear -->
-
-<div class="container">
-    <div class="text-section">
-      <p><a href="/pages/main.html">Home </a>> Sell Old Mobile Phone</p>
-      <h1>Sell your Mobile Phone for <br><strong>Instant Cash</strong></h1>
-      <div class="features">
-        <span>&#10003; Maximum Value</span>
-        <span>&#10003; Safe & Hassle-free</span>
-        <span>&#10003; Free Doorstep Pickup</span>
-      </div>
-
-      <div class="search-box">
-        <input type="text" id="phoneSearch" placeholder="Search your Mobile Phone to sell" oninput="handleSearch()" autocomplete="off">
-        <div class="suggestions" id="suggestions"></div>
-      </div>
-
-      <div class="brands">
-        <h3>-------OR Choose A Brand--------</h3>
-        <br>
-        <div class="brand-list">
-          <a href="/phone/apple.html"><div class="brand-item">Apple</div></a>
-          <div class="brand-item">Mi</div>
-          <div class="brand-item">Samsung</div>
-          <div class="brand-item">Vivo</div>
-          <a href="/sell phone/morebrand/morebrand.html"><div class="brand-item">More Brands</div></a>
+        <!-- costome container -->
+        <div class="custom-container">
+          <h1>Sell OLD Mobile Phone</h1>
+      
+          <div class="custom-breadcrumb">
+            <a href="/pages/main.html">Home</a> &gt; 
+            <a href="#">Sell Mobile Phone</a> &gt; 
+            <span>More Brand</span>
+          </div>
+      
+          <div class="custom-top-bar">
+            <h2>Select Brand</h2>
+            <div class="custom-search-box">
+              <i class="fas fa-search"></i>
+              <input type="text" id="customSearchInput" placeholder="Select Model" onkeyup="customFilterModels()">
+            </div>
+          </div>
+      
+          <div class="custom-model-grid" id="customModelGrid">
+            <a href="/phone/apple.html"><div class="custom-model-card"><img src="/sell phone/morebrand/img/apple.webp"><p>Apple</p></div></a>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/mi.webp"><p>Xiaomi</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/samsung.webp"><p>Samsung</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/vivo.webp"><p>Vivo</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/oneplus.webp"><p>One Plus </p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/oppo.webp"><p>OPPO</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/realme.webp"><p>Real ME</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/moto.webp"><p>Motorola</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/leno.webp"><p>Lenovo</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/nokia.webp"><p>Nokia</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/google.webp"><p>Google</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/honor.webp"><p>Honor</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/poco.webp"><p>Poco</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/infi.webp"><p>Infinix</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/iq.webp"><p>IQOO</p></div>
+            <div class="custom-model-card"><img src="/sell phone/morebrand/img/nothing.webp"><p>Nothing</p></div>
+          </div>
         </div>
-    
-      </div>
-    </div>
 
-    <div class="image-section">
-      <img src="/sell phone/img/nn.webp" alt="Man holding phone and cash">
-    </div>
-  </div>
-<!-- how it work -->
+        <!-- how it work -->
 
 <div class="how-it-works">
     <h2>How GadgetReclaim Works</h2>
@@ -322,7 +324,7 @@
       </div>
     </div>
   </div>
-         <!-- footer  -->
+        <!-- footer  -->
       <footer>
         <div class="foot-pannel1"><a href="#">Back to top</a></div>
         <div class="foot-pannel2">
@@ -383,6 +385,6 @@
             </div>
         </div>
       </footer>
-      <script src="/sell phone/sellphone.js"></script>
-  </body>
-  </html>
+        <script src="/sell phone/morebrand/morebrand.js"></script>
+</body>
+</html>
