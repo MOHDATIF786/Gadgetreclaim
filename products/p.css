@@ -550,6 +550,8 @@ body {
 .product-container {
   max-width: 1000px;
   margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background: white;
   display: flex;
   flex-wrap: wrap;
@@ -588,6 +590,7 @@ body {
 .product-image img {
   max-width: 100%;
   border-radius: 10px;
+  mix-blend-mode: multiply;
 }
 
 .product-details {
@@ -697,6 +700,70 @@ body {
 
   .product-details {
     padding: 20px;
+  }
+}
+
+/* before  */
+
+.trust-section {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.trust-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.trust-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.trust-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  text-align: center;
+  flex: 1 1 calc(16% - 20px);
+  min-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-5px);
+}
+
+.trust-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.trust-card h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+
+.trust-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .trust-card {
+    flex: 1 1 calc(45% - 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .trust-card {
+    flex: 1 1 100%;
   }
 }
 

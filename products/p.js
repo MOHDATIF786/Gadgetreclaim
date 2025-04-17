@@ -2499,7 +2499,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // code
 
 function buyNow() {
-  alert("Thanks for your interest! Redirecting to secure payment...");
+  alert(
+    "Thanks for your interest! Redirecting to secure payment \n\n\n Plz Click ok ......."
+  );
+  window.location.href = "/index.html";
 }
 
 function selectColor(element) {
