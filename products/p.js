@@ -2496,50 +2496,55 @@ document.addEventListener("DOMContentLoaded", () => {
   populateAlphabetFilter();
 });
 
-const allPhones = [
-  "iPhone 14",
-  "iPhone 13",
-  "Samsung Galaxy S23",
-  "Samsung Galaxy A52",
-  "Mi 11X",
-  "Vivo V21",
-  "Realme 8 Pro",
-  "Oppo F19",
-  "OnePlus 11",
-  "Motorola G60",
-  "Nokia 5.4",
-  "Infinix Note 10 Pro",
-];
+// code
 
-function handleSearch() {
-  const query = document.getElementById("phoneSearch").value.toLowerCase();
-  const suggestions = document.getElementById("suggestions");
-  suggestions.innerHTML = "";
-
-  if (query.length === 0) {
-    suggestions.style.display = "none";
-    return;
-  }
-
-  const matches = allPhones.filter((phone) =>
-    phone.toLowerCase().includes(query)
-  );
-  if (matches.length > 0) {
-    matches.forEach((phone) => {
-      const div = document.createElement("div");
-      div.textContent = phone;
-      div.onclick = () => {
-        document.getElementById("phoneSearch").value = phone;
-        suggestions.innerHTML = "";
-        suggestions.style.display = "none";
-      };
-      suggestions.appendChild(div);
-    });
-    suggestions.style.display = "block";
-  } else {
-    const div = document.createElement("div");
-    div.textContent = "No phones found.";
-    suggestions.appendChild(div);
-    suggestions.style.display = "block";
-  }
+function buyNow() {
+  alert("Thanks for your interest! Redirecting to secure payment...");
 }
+
+function selectColor(element) {
+  document.querySelectorAll(".color-options span").forEach((color) => {
+    color.classList.remove("selected");
+  });
+  element.classList.add("selected");
+}
+
+const heart = document.getElementById("wishlistIcon");
+const messageBox = document.getElementById("wishlist-msg");
+
+heart.addEventListener("click", () => {
+  heart.classList.toggle("active");
+
+  const product = {
+    name: "Refurbished iPhone 12",
+    price: "₹32,999",
+    image: "https://via.placeholder.com/350x300?text=Refurbished+Phone",
+  };
+
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  if (heart.classList.contains("active")) {
+    wishlist.push(product);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    showMessage("Added to Wishlist!");
+  } else {
+    wishlist = wishlist.filter((p) => p.name !== product.name);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    showMessage("Removed from Wishlist");
+  }
+});
+
+function showMessage(text) {
+  messageBox.textContent = text;
+  messageBox.style.display = "block";
+  setTimeout(() => {
+    messageBox.style.display = "none";
+  }, 2000);
+}
+
+window.onload = function () {
+  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  if (wishlist.find((p) => p.name === "Refurbished iPhone 12")) {
+    heart.classList.add("active");
+  }
+};

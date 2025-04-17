@@ -14,7 +14,7 @@
     <link rel="icon"
         type="images/icon"
         href="img/logo2.png" >
-    <link rel="stylesheet" href="/sell phone/morebrand/morebrand.css">
+    <link rel="stylesheet" href="/products/p.css">
 </head>
 <body>
     <header>
@@ -164,7 +164,7 @@
                   <li class="nav-item">
                     <a href="#">Buy Phones</a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Apple </a></li>
+                      <li><a href="/phone/buyapple.html">Apple </a></li>
                       <li><a href="#">Samsung</a></li>
                       <li><a href="#">Oneplus</a></li>
                       <li><a href="#">Xiaomi</a></li>
@@ -264,67 +264,70 @@
                 <a href="/contac/contac.html">Contact <i class="fa-solid fa-phone"></i></a></li>
           </div>
         </header>
-        <!-- costome container -->
-        <div class="custom-container">
-          <h1>Sell OLD Mobile Phone</h1>
-      
-          <div class="custom-breadcrumb">
-            <a href="/pages/main.html">Home</a> &gt; 
-            <a href="#">Sell Mobile Phone</a> &gt; 
-            <span>More Brand</span>
-          </div>
-      
-          <div class="custom-top-bar">
-            <h2>Select Brand</h2>
-            <div class="custom-search-box">
-              <i class="fas fa-search"></i>
-              <input type="text" id="customSearchInput" placeholder="Select Model" onkeyup="customFilterModels()">
+
+
+
+
+
+
+        <div class="product-container">
+            <!-- Heart SVG -->
+            <svg class="wishlist-icon" id="wishlistIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
+                4.5 2.09C13.09 3.81 14.76 3 16.5 3 
+                19.58 3 22 5.42 22 8.5c0 
+                3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        
+            <div class="product-image">
+              <img src="https://via.placeholder.com/350x300?text=Refurbished+Phone" alt="Refurbished Gadget">
+            </div>
+            <div class="product-details">
+              <h1>Refurbished iPhone 12</h1>
+              <p><strong>Condition:</strong> Excellent | <strong>Storage:</strong> 128GB</p>
+        
+              <div class="color-options">
+                <p><strong>Choose Color:</strong></p>
+                <span class="color" style="background: black;" onclick="selectColor(this)" title="Black"></span>
+                <span class="color" style="background: white;" onclick="selectColor(this)" title="White"></span>
+                <span class="color" style="background: red;" onclick="selectColor(this)" title="Red"></span>
+                <span class="color" style="background: blue;" onclick="selectColor(this)" title="Blue"></span>
+              </div>
+        
+              <p class="price">₹32,999 <span class="original-price">₹49,999</span></p>
+              
+              <p>This iPhone 12 is fully tested, certified, and comes with a 6-month warranty. Experience high performance at an affordable price.</p>
+              
+              <div class="specs">
+                <h3>Specifications:</h3>
+                <ul>
+                  <li>Display: 6.1-inch Super Retina XDR OLED</li>
+                  <li>Processor: Apple A14 Bionic</li>
+                  <li>Camera: Dual 12MP (Rear), 12MP (Front)</li>
+                  <li>Battery: 2815 mAh</li>
+                  <li>Warranty: 6 Months</li>
+                  <li>Includes: Charger & Cable</li>
+                </ul>
+              </div>
+        
+              <button class="buy-btn" onclick="buyNow()">Buy Now</button>
             </div>
           </div>
-      
-          <div class="custom-model-grid" id="customModelGrid">
-            <a href="/phone/apple.html"><div class="custom-model-card"><img src="/sell phone/morebrand/img/apple.webp"><p>Apple</p></div></a>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/mi.webp"><p>Xiaomi</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/samsung.webp"><p>Samsung</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/vivo.webp"><p>Vivo</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/oneplus.webp"><p>One Plus </p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/oppo.webp"><p>OPPO</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/realme.webp"><p>Real ME</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/moto.webp"><p>Motorola</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/leno.webp"><p>Lenovo</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/nokia.webp"><p>Nokia</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/google.webp"><p>Google</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/honor.webp"><p>Honor</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/poco.webp"><p>Poco</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/infi.webp"><p>Infinix</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/iq.webp"><p>IQOO</p></div>
-            <div class="custom-model-card"><img src="/sell phone/morebrand/img/nothing.webp"><p>Nothing</p></div>
-          </div>
-        </div>
+        
+          <div id="wishlist-msg">Added to Wishlist!</div>
+        
 
-        <!-- how it work -->
 
-<div class="how-it-works">
-    <h2>How GadgetReclaim Works</h2>
-    <div class="steps">
-      <div class="step">
-        <img src="/sell phone/img/w1.webp" alt="Check Price" />
-        <h3>1 Check Price</h3>
-        <p>Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect price for you.</p>
-      </div>
-      <div class="step">
-        <img src="/sell phone/img/w2.webp" alt="Schedule Pickup" />
-        <h3>2 Schedule Pickup</h3>
-        <p>Book a free pickup from your home or work at a time slot that best suits your convenience.</p>
-      </div>
-      <div class="step">
-        <img src="img/w3.webp" alt="Get Paid" />
-        <h3>3 Get Paid</h3>
-        <p>Did we mention you get paid as soon as our executive picks up your device? It's instant payment all the way!</p>
-      </div>
-    </div>
-  </div>
-        <!-- footer  -->
+
+
+
+
+
+
+
+
+            <!-- footer  -->
       <footer>
         <div class="foot-pannel1"><a href="#">Back to top</a></div>
         <div class="foot-pannel2">
@@ -385,6 +388,6 @@
             </div>
         </div>
       </footer>
-        <script src="/sell phone/morebrand/morebrand.js"></script>
-</body>
-</html>
+      <script src="/products/p.js"></script>
+  </body>
+  </html>
