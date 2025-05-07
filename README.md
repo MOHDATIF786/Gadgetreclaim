@@ -14,3 +14,5 @@ Date 23/01/25 Add the new popup for selling the gadget
 Date 07/04/25 Add an apple page and set position fixed of an nevbaar change the dropdown icon from > to right tick one<br>
 <br>
 Date 08/04/25 Add all apple phone with cards and search bar working nav search bar design change
+<br>
+<br>
