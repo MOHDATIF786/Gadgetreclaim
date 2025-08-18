@@ -695,7 +695,7 @@ input[type="email"] {
   background-color: #eaf6f4;
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -759,7 +759,7 @@ input[type="email"] {
 }
 
 .slider-card-1 {
-  min-width: 300px;
+  min-width: 320px;
   margin: 10px;
   background: #f8f8f6;
   border-radius: 10px;
@@ -784,7 +784,7 @@ input[type="email"] {
   height: 150px;
   border-radius: 10px;
   object-fit: contain;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   aspect-ratio: 3/2;
 }
 
@@ -792,7 +792,7 @@ input[type="email"] {
   font-size: 14px;
   font-weight: bold;
   color: #007bff;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .slider-offer-1 {
@@ -854,7 +854,7 @@ input[type="email"] {
   background-color: #28a745;
   color: white;
   border: none;
-  padding: 15px 30px;
+  padding: 14px 40px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 18px;
@@ -1027,8 +1027,8 @@ a:hover {
   background: linear-gradient(135deg, #007bff, #0056b3);
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 18px 52px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   margin-right: 10px;
