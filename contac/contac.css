@@ -634,7 +634,7 @@ h3 {
 
 .feedback-form {
   background: #fafafa;
-  padding: 30px;
+  padding: 43px;
   border-radius: 10px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
@@ -671,6 +671,7 @@ textarea.form-control {
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .submit-btn:hover {
@@ -680,7 +681,7 @@ textarea.form-control {
 .success-message {
   text-align: center;
   color: green;
-  margin-top: 20px;
+  margin-top: 2px;
   display: none;
 }
 
