@@ -385,14 +385,14 @@ input[type="email"] {
 
 /* Add arrows to dropdown items */
 .dropdown-menu li a::after {
-  content: "✓"; /* Rightward arrow for dropdown items */
+  content: "🔻"; /* Rightward arrow for dropdown items */
   font-size: 12px;
   color: #333;
   transition: transform 0.3s ease;
 }
 
 .dropdown-item:hover > a::after {
-  transform: rotate(90deg); /* Rotate arrow for nested items */
+  transform: rotate(180deg); /* Rotate arrow for nested items */
 }
 
 /* Show Dropdown on Hover */

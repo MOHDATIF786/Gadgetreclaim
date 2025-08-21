@@ -357,7 +357,7 @@ body {
 
 /* Add arrows to dropdown items */
 .dropdown-menu2 li a::after {
-  content: "›"; /* Rightward arrow for dropdown items */
+  content: "🔻"; /* Rightward arrow for dropdown items */
   font-size: 12px;
   color: #333;
   transition: transform 0.3s ease;
